@@ -1,6 +1,6 @@
 ﻿namespace Dungeoncall
 {
-    partial class Form2
+    partial class Form3
     {
         /// <summary>
         /// Required designer variable.
@@ -28,45 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            label1 = new Label();
             button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // label1
             // 
-            textBox1.Location = new Point(141, 62);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(512, 224);
-            textBox1.TabIndex = 0;
-            textBox1.Text = "Вы просыпаетесь от падающих вам на лицо капель воды. \r\nВы не помните кто вы и где вы оказались. \r\nВы лежите на голом полу, из одежды у вас порваная туника и штаны.";
+            label1.AutoSize = true;
+            label1.Location = new Point(344, 85);
+            label1.Name = "label1";
+            label1.Size = new Size(50, 20);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
             // 
             // button1
             // 
-            button1.Location = new Point(300, 292);
+            button1.Location = new Point(179, 136);
             button1.Name = "button1";
-            button1.Size = new Size(185, 66);
+            button1.Size = new Size(419, 88);
             button1.TabIndex = 1;
-            button1.Text = "Далее";
+            button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // Form2
+            // button2
+            // 
+            button2.Location = new Point(179, 230);
+            button2.Name = "button2";
+            button2.Size = new Size(419, 88);
+            button2.TabIndex = 2;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(179, 324);
+            button3.Name = "button3";
+            button3.Size = new Size(419, 88);
+            button3.TabIndex = 3;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button3);
+            Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox1);
-            Name = "Form2";
-            Text = "Form2";
+            Controls.Add(label1);
+            Name = "Form3";
+            Text = "Form3";
+            Load += Form3_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
+        private Label label1;
         private Button button1;
+        private Button button2;
+        private Button button3;
     }
 }

@@ -10,6 +10,7 @@ namespace Dungeoncall
         private void button1_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
+            form2.ShowDialog();
             this.Close();
         }
     }
