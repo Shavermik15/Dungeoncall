@@ -40,8 +40,39 @@ namespace Dungeoncall
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OwnerForm.total++;
-            this.Close();
+            if (OwnerForm.count == 3)
+            {
+                if (button1.Visible)
+                {
+                    OwnerForm.pass2++;
+                    this.Close();
+                }
+                else
+                {
+                    OwnerForm.pass2++;
+                    OwnerForm.pass2++;
+                    this.Close();
+                }
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (OwnerForm.count == 3)
+            {
+                if (button1.Visible)
+                {
+                    OwnerForm.pass1++;
+                    this.Close();
+                }
+                else
+                {
+                    OwnerForm.pass1++;
+                    OwnerForm.pass1++;
+                    this.Close();
+                }
+            }
         }
     }
 }

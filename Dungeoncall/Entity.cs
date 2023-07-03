@@ -28,24 +28,24 @@ namespace Dungeoncall
                 if (value > 0) 
                     armor = value; 
                 else  armor = 0; 
-                if (value>1)
+                if (value>100)
                 {
-                    armor = 1;
+                    armor = 100;
                 }
             }
         }
         private int critrate;
         public int CritRate
         {
-            get { return armor; }
+            get { return critrate; }
             set
             {
                 if (value > 0)
-                    armor = value;
+                    critrate = value;
                 else armor = 0;
-                if (value > 1)
+                if (value > 100)
                 {
-                    armor = 1;
+                    critrate = 100;
                 }
             }
         }
@@ -76,18 +76,18 @@ namespace Dungeoncall
             {
                 this.armor = 0;
             }
-            else if (armor > 1)
+            else if (armor > 100)
             {
-                this.armor = 1;
+                this.armor = 100;
             }
             else { this.armor = armor; }
             if (critrate < 0)
             {
                 this.critrate = 0;
             }
-            else if (critrate > 1)
+            else if (critrate > 100)
             {
-                this.critrate = 1;
+                this.critrate = 100;
             }
             else { this.critrate = critrate; }
             if (damage < 0)
