@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Dungeoncall
-{
+{ //класс необходимый, но был создан явно наперёд, можно было и проще
     public  class Entity
-    {
+    { 
         private string _name;
         public string Name { get { return _name; } }
         private int hp;

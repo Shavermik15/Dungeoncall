@@ -46,7 +46,7 @@ namespace Dungeoncall
                 button1.Visible = false;
                 StaticData.IsTorchStatus = true;
             }
-            if (OwnerForm.count >= 4)
+            if (OwnerForm.count == 4|| OwnerForm.count == 5)
             {
                 button1.Text = "Осмотреть сундук";
                 button2.Text = "Пройти мимо";
@@ -69,6 +69,10 @@ namespace Dungeoncall
 
                 }
             }
+            if (countfloor2 == 1)
+            {
+                this.Close();
+            }
             
         }
 
@@ -90,19 +94,27 @@ namespace Dungeoncall
             }
             if (OwnerForm.count == 4)
             {
-                MessageBox.Show("Вы вошли в правый тоннель.Практически сразу перед входом есть небольшой проход в котором гораздо меньше паутины.");
+                label1.Text = "Вы вошли в правый тоннель.\nПрактически сразу перед входом есть небольшой проход \nв котором гораздо меньше паутины.";
                 button1.Text = "Войти";
                 button2.Text = "Пройти мимо";
                 countfloor2++;
+                OwnerForm.count = -1;
             }
-            if (OwnerForm.count == 5)
+            if (OwnerForm.count == 5&&countfloor2==0)
             {
-                MessageBox.Show("Вы решили пройти мимо, так как думаете что там есть ловушка. А вы умны! Вы проходите в комнату в центре которой горит костёр с вокнутым мечом.");
+                label1.Text = "Вы решили пройти мимо, так как думаете что там есть ловушка. \nА вы умны! \nВы проходите в комнату в центре которой горит костёр с вокнутым мечом.";
             }
-            if (countfloor2 == 2)
+            
+            
+                if (countfloor2 == 2)
             {
-                //OwnerForm.countfloor2++;
+               
+                OwnerForm.countfloor2++;
                 this.Close();
+            }
+            if (countfloor2 == 1)
+            {
+                countfloor2++;
             }
         }
 

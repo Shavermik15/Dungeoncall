@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Dungeoncall
 {
     public partial class Form5 : Form
-    {
+    { //запасная форма?
         public Form5(Entity TheMainCharacter)
         {
             InitializeComponent();

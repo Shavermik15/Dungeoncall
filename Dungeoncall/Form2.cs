@@ -60,7 +60,7 @@ namespace Dungeoncall
         {
             try
             {
-
+                //начало и первый выбор
                 textBox1.Text = "На противоположной стороне комнаты вам в глаза вам бросается факел, который горит синим огнём, его света еле хватает чтобы осмотреться вокруг.";
                 count++;
                 switch (count)
@@ -76,6 +76,7 @@ namespace Dungeoncall
                    
 
                 }
+                //логика первого прохода
                 switch (pass1)
                 {
                     case 1:
@@ -202,7 +203,7 @@ namespace Dungeoncall
                         }
                         break;
                 }
-
+                //логика второго прохода
                 switch (pass2)
                 {
                     case 1:
@@ -231,6 +232,7 @@ namespace Dungeoncall
                         }
                         break;
                 }
+                //логика второго этажа
                 switch (countfloor2)
                 {
                     case 1:

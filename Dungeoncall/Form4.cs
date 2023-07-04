@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Dungeoncall
-{
+{ //тут идёт бой и выпадение наград
     public partial class Form4 : Form
     {
         int bufdamage;
