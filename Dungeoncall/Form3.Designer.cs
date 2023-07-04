@@ -38,7 +38,7 @@
             // 
             label1.AutoEllipsis = true;
             label1.AutoSize = true;
-            label1.Location = new Point(355, 87);
+            label1.Location = new Point(179, 29);
             label1.Name = "label1";
             label1.Size = new Size(50, 20);
             label1.TabIndex = 0;

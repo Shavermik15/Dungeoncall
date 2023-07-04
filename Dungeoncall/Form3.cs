@@ -13,6 +13,7 @@ namespace Dungeoncall
     public partial class Form3 : Form
     {
         Form2 OwnerForm;
+        int countfloor2;
         public Form3(Form2 ownerForm)
         {
             this.OwnerForm = ownerForm;
@@ -39,18 +40,20 @@ namespace Dungeoncall
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             if (OwnerForm.count == 3)
             {
                 button1.Visible = false;
                 StaticData.IsTorchStatus = true;
             }
-            if (OwnerForm.count == 4)
+            if (OwnerForm.count >= 4)
             {
                 button1.Text = "Осмотреть сундук";
                 button2.Text = "Пройти мимо";
                 OwnerForm.count++;
+
             }
-            if (OwnerForm.count == 5)
+            if (OwnerForm.count == 6)
             {
                 if (StaticData.IsTorchStatus)
                 {
@@ -66,6 +69,7 @@ namespace Dungeoncall
 
                 }
             }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -86,9 +90,20 @@ namespace Dungeoncall
             }
             if (OwnerForm.count == 4)
             {
-
+                MessageBox.Show("Вы вошли в правый тоннель.Практически сразу перед входом есть небольшой проход в котором гораздо меньше паутины.");
+                button1.Text = "Войти";
+                button2.Text = "Пройти мимо";
+                countfloor2++;
             }
-
+            if (OwnerForm.count == 5)
+            {
+                MessageBox.Show("Вы решили пройти мимо, так как думаете что там есть ловушка. А вы умны! Вы проходите в комнату в центре которой горит костёр с вокнутым мечом.");
+            }
+            if (countfloor2 == 2)
+            {
+                //OwnerForm.countfloor2++;
+                this.Close();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
