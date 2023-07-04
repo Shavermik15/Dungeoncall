@@ -14,7 +14,7 @@ namespace Dungeoncall
             {
                 Form2 form2 = new Form2();
                 form2.ShowDialog();
-                this.Close();
+             
             }
             catch (Exception er)
             {

@@ -28,6 +28,13 @@ namespace Dungeoncall
                 button2.Text = "Пойти в левый проход";
                 button3.Text = "Пойти в правый проход";
             }
+            if (OwnerForm.count == 4)
+            {
+                label1.Text = "Вы спустились вниз по лестнице и попали в пустую комнату.\n Вся комната облеплена паутиной, которая замедляет ваши движения.\n На этот раз перед вами два тоннеля.";
+                button3.Visible = false;
+                button1.Text = "Войти в левый тоннель.";
+                button2.Text = "Войти в правый тоннель.";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,6 +42,29 @@ namespace Dungeoncall
             if (OwnerForm.count == 3)
             {
                 button1.Visible = false;
+                StaticData.IsTorchStatus = true;
+            }
+            if (OwnerForm.count == 4)
+            {
+                button1.Text = "Осмотреть сундук";
+                button2.Text = "Пройти мимо";
+                OwnerForm.count++;
+            }
+            if (OwnerForm.count == 5)
+            {
+                if (StaticData.IsTorchStatus)
+                {
+                    MessageBox.Show(" Вы поджигаете паутину и она быстро сгорает. Когда вся паутина сгорела вы замечаете ловушку соединённую с сундуком, вы с легкостью обезвреживаете ловушку и открываете сундук. Внутри вы находите (Предмет). Затем вы проходите в комнату в центре которой горит костёр с вокнутым мечом. (Вы попадаете в безопасную команту)");
+                }
+                else
+                {
+                    MessageBox.Show("Вы пытаетесь открыть сундук но вам мешает паутина. Внезапно вы слышите щелчок и в вашу ногу попадает стрела. ");
+                    MessageBox.Show("Стоило Вам закрыть глаза...Как... ");
+
+                    StaticData.BattleStatus = false;
+                    this.Close();
+
+                }
             }
         }
 
@@ -53,6 +83,10 @@ namespace Dungeoncall
                     OwnerForm.pass2++;
                     this.Close();
                 }
+            }
+            if (OwnerForm.count == 4)
+            {
+
             }
 
         }
